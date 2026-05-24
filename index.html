@@ -1,0 +1,2255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Right Lane Market | Haitian • Natural • Authentic</title>
+  <meta name="description" content="Discover premium, authentic, 100% natural Haitian recipes and staples from our lane to your table. Handcrafted with love.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* CSS CUSTOM PROPERTIES / DESIGN SYSTEM */
+    :root {
+      --bg-primary: #FAF8F5;
+      --bg-secondary: #F3EFEA;
+      --text-primary: #1B2E22;
+      --text-secondary: #5C665F;
+      --accent-green: #2E6F40;
+      --accent-green-hover: #1E502B;
+      --accent-gold: #C5A059;
+      --accent-gold-light: #F4E8C1;
+      --accent-red: #B22222;
+      --accent-blue: #1C3F75;
+      --white: #FFFFFF;
+      --card-border: #E8E4DC;
+      --border-radius-sm: 8px;
+      --border-radius-md: 16px;
+      --border-radius-lg: 24px;
+      --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      
+      --shadow-sm: 0 4px 12px rgba(27, 46, 34, 0.03);
+      --shadow-md: 0 12px 32px rgba(27, 46, 34, 0.06);
+      --shadow-lg: 0 24px 64px rgba(27, 46, 34, 0.12);
+      
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    /* GLOBAL RESET */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* TYPOGRAPHY */
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    p {
+      color: var(--text-secondary);
+      font-size: 1rem;
+    }
+
+    /* LAYOUT UTILITIES */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 28px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: var(--border-radius-sm);
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      transition: var(--transition-smooth);
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background-color: var(--accent-green);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-green-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(46, 111, 64, 0.2);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--accent-green);
+      border: 2px solid var(--accent-green);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--accent-green);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    /* HEADER & NAVIGATION */
+    header {
+      background-color: rgba(250, 248, 245, 0.9);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--card-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 16px 0;
+      transition: var(--transition-smooth);
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-main {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--accent-green);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    .logo-sub {
+      font-size: 0.7rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--accent-gold);
+      margin-top: -2px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: var(--accent-gold);
+      transition: var(--transition-smooth);
+    }
+
+    nav a:hover {
+      color: var(--accent-green);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .cart-trigger {
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      padding: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition-smooth);
+      color: var(--text-primary);
+    }
+
+    .cart-trigger:hover {
+      color: var(--accent-green);
+      transform: scale(1.05);
+    }
+
+    .cart-count {
+      position: absolute;
+      top: -2px;
+      right: -2px;
+      background-color: var(--accent-red);
+      color: var(--white);
+      font-size: 0.7rem;
+      font-weight: 700;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid var(--bg-primary);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      padding: 80px 0 100px;
+      background: radial-gradient(circle at 80% 20%, rgba(244, 232, 193, 0.4) 0%, rgba(250, 248, 245, 1) 70%),
+                  url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M35 0c-4.97 0-9 4.03-9 9 0 4.97 4.03 9 9 9s9-4.03 9-9c0-4.97-4.03-9-9-9zm-10 40c-4.97 0-9 4.03-9 9 0 4.97 4.03 9 9 9s9-4.03 9-9c0-4.97-4.03-9-9-9z' fill='%23e8e4dc' fill-opacity='0.15' fill-rule='evenodd'/%3E%3C/svg%3E");
+      border-bottom: 1px solid var(--card-border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 45%;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(250,248,245,1) 0%, rgba(250,248,245,0) 100%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .hero-content {
+      z-index: 2;
+    }
+
+    .hero-tag {
+      font-size: 0.85rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--accent-gold);
+      margin-bottom: 16px;
+      display: inline-block;
+      border-bottom: 2px solid var(--accent-gold-light);
+      padding-bottom: 4px;
+    }
+
+    .hero h1 {
+      font-size: 3.6rem;
+      color: var(--text-primary);
+      margin-bottom: 24px;
+      letter-spacing: -1px;
+    }
+
+    .hero h1 span {
+      color: var(--accent-green);
+      font-style: italic;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      margin-bottom: 36px;
+      max-width: 540px;
+      color: var(--text-secondary);
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+    }
+
+    .hero-badge-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 48px;
+    }
+
+    .hero-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      background-color: var(--bg-secondary);
+      padding: 6px 12px;
+      border-radius: 30px;
+      border: 1px solid var(--card-border);
+    }
+
+    .hero-badge svg {
+      color: var(--accent-gold);
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+    }
+
+    .hero-image-container {
+      position: relative;
+      width: 100%;
+      max-width: 440px;
+      height: 480px;
+      border-radius: var(--border-radius-lg);
+      background: var(--white);
+      border: 8px solid var(--white);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      transform: rotate(2deg);
+      transition: var(--transition-smooth);
+    }
+
+    .hero-image-container:hover {
+      transform: rotate(0deg) scale(1.02);
+    }
+
+    .hero-image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition-smooth);
+    }
+
+    .haiti-flag-badge {
+      position: absolute;
+      bottom: -15px;
+      left: -15px;
+      background: linear-gradient(135deg, var(--accent-blue) 50%, var(--accent-red) 50%);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      padding: 10px 20px;
+      border-radius: var(--border-radius-sm);
+      box-shadow: var(--shadow-md);
+      transform: rotate(-5deg);
+      z-index: 3;
+      border: 2px solid var(--white);
+    }
+
+    /* FEATURES / VALUES SECTION */
+    .features {
+      padding: 60px 0;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    .feature-card {
+      text-align: center;
+      padding: 24px;
+      transition: var(--transition-smooth);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-icon {
+      width: 56px;
+      height: 56px;
+      background-color: var(--bg-secondary);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-green);
+      margin-bottom: 16px;
+      transition: var(--transition-smooth);
+    }
+
+    .feature-card:hover .feature-icon {
+      background-color: var(--accent-gold-light);
+      color: var(--accent-green);
+    }
+
+    .feature-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: var(--text-primary);
+    }
+
+    .feature-card p {
+      font-size: 0.85rem;
+    }
+
+    /* STOREFRONT / SHOP GRID */
+    .shop-section {
+      padding: 100px 0;
+      background-color: var(--white);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 60px;
+    }
+
+    .section-header h2 {
+      font-size: 2.6rem;
+      margin-bottom: 16px;
+      color: var(--text-primary);
+    }
+
+    .section-header p {
+      font-size: 1.05rem;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+
+    .product-card {
+      background-color: var(--bg-primary);
+      border: 1px solid var(--card-border);
+      border-radius: var(--border-radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      min-height: 280px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent-gold);
+    }
+
+    .product-image-container {
+      width: 42%;
+      position: relative;
+      overflow: hidden;
+      background-color: var(--bg-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .product-image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition-smooth);
+    }
+
+    .product-card:hover .product-image-container img {
+      transform: scale(1.06);
+    }
+
+    .product-image-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      color: var(--text-secondary);
+      font-family: var(--font-serif);
+      font-size: 0.9rem;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    }
+
+    .product-image-placeholder svg {
+      width: 48px;
+      height: 48px;
+      color: var(--accent-gold);
+      margin-bottom: 12px;
+      opacity: 0.7;
+    }
+
+    .product-details {
+      width: 58%;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-details-top {
+      position: relative;
+    }
+
+    .product-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      color: var(--accent-gold);
+      margin-bottom: 8px;
+    }
+
+    .product-card h3 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+    }
+
+    .product-card .price {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--accent-green);
+      margin-bottom: 16px;
+      font-family: var(--font-sans);
+    }
+
+    .product-card .description {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 24px;
+      color: var(--text-secondary);
+    }
+
+    .product-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .qty-control {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--card-border);
+      border-radius: var(--border-radius-sm);
+      background-color: var(--white);
+      overflow: hidden;
+    }
+
+    .qty-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: 36px;
+      height: 40px;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-primary);
+      transition: var(--transition-smooth);
+    }
+
+    .qty-btn:hover {
+      background-color: var(--bg-secondary);
+      color: var(--accent-green);
+    }
+
+    .qty-number {
+      width: 32px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.95rem;
+      user-select: none;
+    }
+
+    .btn-add-to-cart {
+      flex: 1;
+      padding: 10px 16px;
+      font-size: 0.85rem;
+      border-radius: var(--border-radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-edit-indicator {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--card-border);
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      color: var(--text-secondary);
+      transition: var(--transition-smooth);
+      z-index: 5;
+    }
+
+    .btn-edit-indicator:hover {
+      background-color: var(--accent-gold-light);
+      color: var(--accent-green);
+      transform: scale(1.1);
+    }
+
+    /* SLIDE OUT CART DRAWER */
+    .cart-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(27, 46, 34, 0.4);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      z-index: 1000;
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: -480px;
+      width: 480px;
+      max-width: 100%;
+      height: 100vh;
+      background-color: var(--white);
+      box-shadow: var(--shadow-lg);
+      z-index: 1001;
+      display: flex;
+      flex-direction: column;
+      transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .cart-overlay.active {
+      display: block;
+      opacity: 1;
+    }
+
+    .cart-drawer.active {
+      right: 0;
+    }
+
+    .cart-header {
+      padding: 24px;
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--bg-primary);
+    }
+
+    .cart-header h2 {
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .close-cart {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text-primary);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition-smooth);
+      border: 1px solid transparent;
+    }
+
+    .close-cart:hover {
+      background-color: var(--bg-secondary);
+      border-color: var(--card-border);
+    }
+
+    .cart-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px;
+    }
+
+    .cart-empty-message {
+      text-align: center;
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cart-empty-message svg {
+      width: 64px;
+      height: 64px;
+      color: var(--card-border);
+      margin-bottom: 20px;
+    }
+
+    .cart-empty-message p {
+      font-size: 1rem;
+      margin-bottom: 24px;
+    }
+
+    .cart-items-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .cart-item {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 20px;
+    }
+
+    .cart-item-img {
+      width: 64px;
+      height: 64px;
+      border-radius: var(--border-radius-sm);
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+      background-color: var(--bg-secondary);
+    }
+
+    .cart-item-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cart-item-details {
+      flex: 1;
+    }
+
+    .cart-item-details h4 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+      color: var(--text-primary);
+    }
+
+    .cart-item-details .cart-item-price {
+      font-size: 0.9rem;
+      color: var(--accent-green);
+      font-weight: 600;
+    }
+
+    .cart-item-remove {
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      cursor: pointer;
+      padding: 4px;
+      transition: var(--transition-smooth);
+    }
+
+    .cart-item-remove:hover {
+      color: var(--accent-red);
+    }
+
+    /* CHECKOUT FORM IN CART */
+    .checkout-form-container {
+      margin-top: 32px;
+      border-top: 2px dashed var(--card-border);
+      padding-top: 32px;
+    }
+
+    .checkout-form-container h3 {
+      font-size: 1.15rem;
+      margin-bottom: 16px;
+    }
+
+    .form-group-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+      color: var(--text-primary);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid var(--card-border);
+      border-radius: var(--border-radius-sm);
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      transition: var(--transition-smooth);
+      background-color: var(--bg-primary);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--accent-green);
+      background-color: var(--white);
+      box-shadow: 0 0 0 3px rgba(46, 111, 64, 0.1);
+    }
+
+    /* CART FOOTER */
+    .cart-footer {
+      padding: 24px;
+      border-top: 1px solid var(--card-border);
+      background-color: var(--bg-primary);
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+      color: var(--text-secondary);
+    }
+
+    .summary-row.shipping-note {
+      font-size: 0.75rem;
+      margin-top: -6px;
+      margin-bottom: 14px;
+      font-style: italic;
+      color: var(--accent-green);
+    }
+
+    .summary-row.total {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      border-top: 1px solid var(--card-border);
+      padding-top: 14px;
+      margin-top: 14px;
+      margin-bottom: 20px;
+    }
+
+    .btn-checkout {
+      width: 100%;
+      padding: 16px;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    /* SUCCESS MODAL OVERLAY */
+    .success-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(27, 46, 34, 0.6);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .success-modal {
+      background-color: var(--white);
+      border-radius: var(--border-radius-md);
+      box-shadow: var(--shadow-lg);
+      padding: 40px;
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+      position: relative;
+      border: 4px solid var(--accent-gold-light);
+    }
+
+    .success-icon {
+      width: 72px;
+      height: 72px;
+      background-color: #E6F4EA;
+      color: var(--accent-green);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .success-modal h2 {
+      font-size: 2.2rem;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    .success-modal p {
+      font-size: 0.95rem;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: var(--bg-secondary);
+      border-top: 1px solid var(--card-border);
+      padding: 60px 0 40px;
+      position: relative;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 1fr;
+      gap: 48px;
+      margin-bottom: 40px;
+    }
+
+    .footer-col h3 {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: var(--text-primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .footer-col p {
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+    }
+
+    .footer-social-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .footer-social-links a {
+      width: 40px;
+      height: 40px;
+      background-color: var(--bg-primary);
+      border: 1px solid var(--card-border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-primary);
+      transition: var(--transition-smooth);
+      text-decoration: none;
+    }
+
+    .footer-social-links a:hover {
+      background-color: var(--accent-green);
+      color: var(--white);
+      transform: translateY(-3px);
+    }
+
+    .footer-links-list {
+      list-style: none;
+    }
+
+    .footer-links-list li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links-list a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      transition: var(--transition-smooth);
+    }
+
+    .footer-links-list a:hover {
+      color: var(--accent-green);
+      padding-left: 4px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--card-border);
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-bottom p {
+      font-size: 0.8rem;
+    }
+
+    .admin-cog {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text-secondary);
+      transition: var(--transition-smooth);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .admin-cog:hover {
+      color: var(--accent-gold);
+    }
+
+    /* ADMIN DASHBOARD MODAL */
+    .admin-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(27, 46, 34, 0.5);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .admin-modal {
+      background-color: var(--white);
+      border-radius: var(--border-radius-md);
+      box-shadow: var(--shadow-lg);
+      width: 100%;
+      max-width: 800px;
+      max-height: 90vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--card-border);
+    }
+
+    .admin-header {
+      padding: 20px 24px;
+      background-color: var(--bg-secondary);
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .admin-header h2 {
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-primary);
+    }
+
+    .admin-body {
+      padding: 24px;
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    .admin-section-title {
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent-gold);
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 6px;
+      margin-top: 12px;
+    }
+
+    .admin-product-row {
+      display: grid;
+      grid-template-columns: 0.8fr 1fr 2fr 1fr;
+      gap: 16px;
+      align-items: center;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--bg-secondary);
+    }
+
+    .admin-product-row:last-child {
+      border-bottom: none;
+    }
+
+    .admin-img-preview {
+      width: 50px;
+      height: 50px;
+      border-radius: 4px;
+      object-fit: cover;
+      border: 1px solid var(--card-border);
+      background-color: var(--bg-secondary);
+    }
+
+    .file-input-wrapper {
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+    }
+
+    .btn-file-upload {
+      border: 1px solid var(--card-border);
+      background-color: var(--white);
+      padding: 6px 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .btn-file-upload:hover {
+      background-color: var(--bg-secondary);
+      border-color: var(--accent-gold);
+    }
+
+    .file-input-wrapper input[type=file] {
+      font-size: 100px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .admin-footer {
+      padding: 16px 24px;
+      background-color: var(--bg-secondary);
+      border-top: 1px solid var(--card-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .admin-mode-banner {
+      background-color: var(--accent-gold-light);
+      border-bottom: 1px solid var(--accent-gold);
+      padding: 6px;
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent-green-hover);
+      display: none;
+    }
+
+    /* RESPONSIVE MEDIA QUERIES */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .hero-buttons {
+        justify-content: center;
+      }
+      .hero-badge-container {
+        justify-content: center;
+        margin-top: 36px;
+      }
+      .hero-image-wrapper {
+        order: -1;
+      }
+      .hero-image-container {
+        height: 380px;
+      }
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .products-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .product-card {
+        flex-direction: column;
+        min-height: auto;
+      }
+      .product-image-container {
+        width: 100%;
+        height: 220px;
+      }
+      .product-details {
+        width: 100%;
+        padding: 24px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .admin-product-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .admin-product-row img {
+        grid-column: span 2;
+        margin: 0 auto;
+      }
+      .admin-product-row div {
+        grid-column: span 2;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+      .btn {
+        width: 100%;
+      }
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+      .close-cart {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Admin Mode Banner -->
+  <div id="adminModeBanner" class="admin-mode-banner">
+    LIVE CUSTOMIZATION MODE ACTIVE - Any edits you make will save to your browser's persistent memory.
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header>
+    <div class="container header-container">
+      <a href="#" class="logo-container">
+        <span class="logo-main">Live Right Lane</span>
+        <span class="logo-sub">Market</span>
+      </a>
+      <nav>
+        <a href="#shop">Storefront</a>
+        <a href="#about">Our Story</a>
+        <a href="#contact">Contact</a>
+        <button class="cart-trigger" onclick="toggleCart(true)" aria-label="Open cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="hero-tag">Organic • Authentic • Haitian</span>
+        <h1 id="heroTitle">From Our Lane<br>To Your <span>Table</span></h1>
+        <p id="heroDescription">Experience the vibrant warmth of authentic Haitian cooking. Hand-crafted recipes, pure organic ingredients, and generations of rich traditional flavor imported directly to delight your senses.</p>
+        <div class="hero-buttons">
+          <a href="#shop" class="btn btn-primary">Shop Organic Storefront</a>
+          <a href="#about" class="btn btn-secondary">Discover Our Story</a>
+        </div>
+        <div class="hero-badge-container">
+          <div class="hero-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+            </svg>
+            100% Preservative Free
+          </div>
+          <div class="hero-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+            </svg>
+            Authentic Haitian Recipe
+          </div>
+        </div>
+      </div>
+      <div class="hero-image-wrapper">
+        <div class="hero-image-container">
+          <img src="images/chocolat.jpg" alt="Authentic Haitian Chocolat" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns%3D%22http%3D%22%2F%2Fwww.w3.org%2F2000%2Fsvg%22 width%3D%22400%22 height%3D%22400%22%3E%3Crect width%3D%22100%25%22 height%3D%22100%25%22 fill%3D%22%23F3EFEA%22%2F%3E%3Ctext x%3D%2250%25%22 y%3D%2250%25%22 font-family%3D%22serif%22 font-size%3D%2220%22 text-anchor%3D%22middle%22 fill%3D%22%232E6F40%22%3ELive Right Lane Market%3C%2Ftext%3E%3C%2Fsvg%3E'">
+          <div class="haiti-flag-badge">REAL HAITI</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES / CORE VALUE BANNER -->
+  <section class="features">
+    <div class="container features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+        </div>
+        <h3>100% Pure & Natural</h3>
+        <p>No chemicals, artificial flavor enhancers, or hidden preservatives. Pure natural flavor.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+          </svg>
+        </div>
+        <h3>Small Batch Handcrafted</h3>
+        <p>Carefully prepared in custom small batches using local ingredients and time-honored practices.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h2m.358 5.585A9 9 0 102.215 9.006" />
+          </svg>
+        </div>
+        <h3>Haitian Tradition</h3>
+        <p>Deep rich culture in every bite. Made with the same traditional recipe enjoyed for generations.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <h3>Fair Shipping Rates</h3>
+        <p>Standard flat rate of $9.99 for single purchases, capped at $11.99 for two or more items.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STOREFRONT SECTION -->
+  <section class="shop-section" id="shop">
+    <div class="container">
+      <div class="section-header">
+        <h2>Taste Our Creations</h2>
+        <p>Bring the warmth, rich aroma, and natural health of traditional Haitian staples into your kitchen. Freshly packed and ready to savor.</p>
+      </div>
+      
+      <!-- Dynamic Products Grid -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Products will be dynamically populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / BRAND STORY SECTION -->
+  <section class="shop-section" id="about" style="background-color: var(--bg-secondary); border-top: 1px solid var(--card-border);">
+    <div class="container hero-grid">
+      <div class="hero-image-wrapper" style="order: 0;">
+        <div class="hero-image-container" style="transform: rotate(-2deg); max-height: 400px;">
+          <img src="images/epis.jpg" alt="Haitian Epis Handcrafted" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns%3D%22http%3D%22%2F%2Fwww.w3.org%2F2000%2Fsvg%22 width%3D%22400%22 height%3D%22400%22%3E%3Crect width%3D%22100%25%22 height%3D%22100%25%22 fill%3D%22%23F3EFEA%22%2F%3E%3Ctext x%3D%2250%25%22 y%3D%2250%25%22 font-family%3D%22serif%22 font-size%3D%2220%22 text-anchor%3D%22middle%22 fill%3D%22%232E6F40%22%3ELive Right Lane Market%3C%2Ftext%3E%3C%2Fsvg%3E'">
+        </div>
+      </div>
+      <div class="hero-content">
+        <span class="hero-tag">From Our Lane To Your Table</span>
+        <h2>Made With Passion, Sourced With Integrity</h2>
+        <p style="margin-bottom: 20px;">At **Live Right Lane Market**, we believe that real cooking starts with real ingredients. Our journey began with a simple desire: to preserve and share the incredibly rich, traditional food heritage of Haiti. We work directly with small growers and kitchen masters to bring you products made with absolute respect for nature.</p>
+        <p style="margin-bottom: 24px;">Every spoonful of our fresh green Epis, every block of premium Chocolat, and every bag of natural flour carries the love, flavor, and sunshine of Haiti. Welcome to our lane—where wholesome ingredients and legendary traditional spices meet.</p>
+        <a href="#shop" class="btn btn-primary">Browse Wholesome Pantry</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE OUT CART DRAWER OVERLAY -->
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart(false)"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h2>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+        </svg>
+        Your Wholesome Cart
+      </h2>
+      <button class="close-cart" onclick="toggleCart(false)" aria-label="Close cart">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    
+    <div class="cart-body" id="cartBody">
+      <!-- Dynamic Cart Content -->
+    </div>
+    
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="summary-row">
+        <span>Cart Subtotal</span>
+        <span id="cartSubtotal">$0.00</span>
+      </div>
+      <div class="summary-row">
+        <span>Shipping & Handling</span>
+        <span id="cartShipping">$0.00</span>
+      </div>
+      <div class="summary-row shipping-note" id="shippingMessage">
+        Add 1 more item to unlock flat capped shipping!
+      </div>
+      <div class="summary-row total">
+        <span>Total Amount Due</span>
+        <span id="cartTotal">$0.00</span>
+      </div>
+      
+      <!-- Checkout Button -->
+      <button class="btn btn-primary btn-checkout" onclick="submitOrder()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        Submit Secure Order
+      </button>
+    </div>
+  </div>
+
+  <!-- ORDER SUCCESS MODAL -->
+  <div class="success-overlay" id="successOverlay">
+    <div class="success-modal">
+      <div class="success-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      <h2>Order Placed!</h2>
+      <p id="successMessage">Thank you for your purchase. Your order invoice has been compiled and emailed to the store owner. You will receive an email confirmation soon to finalize payment and shipping.</p>
+      <button class="btn btn-primary" onclick="closeSuccessModal()" style="width: auto; padding: 12px 32px;">Continue Browsing</button>
+    </div>
+  </div>
+
+  <!-- SECURE STORE ADMIN DASHBOARD -->
+  <div class="admin-overlay" id="adminOverlay">
+    <div class="admin-modal">
+      <div class="admin-header">
+        <h2>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          Store Setup & Customization Panel
+        </h2>
+        <button class="close-cart" onclick="toggleAdminPanel(false)" aria-label="Close panel">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      
+      <div class="admin-body">
+        <p style="font-size: 0.9rem; margin-bottom: 24px; color: var(--text-secondary);">Customize your storefront parameters directly in your browser. Upload pictures, change prices, and set your order receiver email. These changes are kept persistently in your browser's local storage.</p>
+        
+        <div class="admin-section-title">General Settings</div>
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="adminStoreEmail">Store Owner Email (For Order Fallback)</label>
+            <input type="email" id="adminStoreEmail" class="form-control" placeholder="your-email@example.com">
+          </div>
+          <div class="form-group">
+            <label for="adminWeb3Key">Web3Forms Access Key (Instant Email API)</label>
+            <input type="text" id="adminWeb3Key" class="form-control" placeholder="Enter key (e.g. abcd-1234-...)">
+            <small style="font-size: 0.75rem; color: var(--accent-green); display: block; margin-top: 4px;">
+              Get a free key in 10 seconds: <a href="https://web3forms.com/" target="_blank" style="color: var(--accent-gold); text-decoration: underline; font-weight: 600;">web3forms.com</a>
+            </small>
+          </div>
+        </div>
+
+        <div class="admin-section-title">Product Customization & Picture Uploads</div>
+        <div id="adminProductRows">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+      
+      <div class="admin-footer">
+        <button class="btn btn-secondary" onclick="resetAdminDefaults()" style="padding: 10px 20px; font-size: 0.85rem; border-color: var(--accent-red); color: var(--accent-red);">Reset Defaults</button>
+        <button class="btn btn-primary" onclick="saveAdminSettings()" style="padding: 10px 24px; font-size: 0.85rem;">Save Changes</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CORE FOOTER -->
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="#" class="logo-container" style="margin-bottom: 20px;">
+            <span class="logo-main" style="color: var(--text-primary);">Live Right Lane</span>
+            <span class="logo-sub">Market</span>
+          </a>
+          <p>Importing the pure, healthy, and authentic culinary secrets of Haiti straight to your table. Real flavor. Real heritage.</p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com/liverightlane.market" target="_blank" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Pantry Storefront</h3>
+          <ul class="footer-links-list">
+            <li><a href="#shop">Taste Our Creations</a></li>
+            <li><a href="#about">Our Wholesome Story</a></li>
+            <li><a href="#contact">Contact Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Store Contact</h3>
+          <p>Have wholesale inquiries, custom orders, or questions about organic sourcing?</p>
+          <p style="font-weight: 600; color: var(--text-primary); margin-bottom: 4px;">Email Us</p>
+          <p id="footerDisplayEmail" style="font-size: 0.95rem; color: var(--accent-green); font-weight: 500;">liverightlane.market@gmail.com</p>
+          <p style="font-weight: 600; color: var(--text-primary); margin-bottom: 4px; margin-top: 16px;">Instagram Direct Message</p>
+          <p style="font-size: 0.95rem; color: var(--accent-gold); font-weight: 500;">@liverightlane.market</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Live Right Lane Market. Sourced in Haiti, crafted with love. All rights reserved.</p>
+        <button class="admin-cog" onclick="toggleAdminPanel(true)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          Store Settings
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CLIENT SHOPPING ENGINE & DYNAMIC LOGIC -->
+  <script>
+    // 1. DEFAULT DATASET
+    const DEFAULT_PRODUCTS = [
+      {
+        id: "epis",
+        title: "Haitian Epis",
+        price: 14.95,
+        badge: "Best Seller",
+        description: "A fresh, vibrant, homemade blend of premium herbs, peppers, and garlic. The absolute cornerstone of Haitian cuisine, crafted in small batches to elevate every meal with bold, authentic flavor. No preservatives.",
+        image: "images/epis.jpg"
+      },
+      {
+        id: "pomme_de_terre",
+        title: "Farrine Pomme De Terre",
+        price: 12.95,
+        badge: "Organic Flour",
+        description: "Our premium Farin Pomme de Terre blend is knowing for its rich aroma and smooth, creamy finish. Perfectly balanced to absorb traditional spices like star anise, cinnamon, and nutmeg, our blend ensures a consistent, high-quality result every time. Clean, smooth, and flavor-ready for your favorite sweet spices. Whether for a hearty breakfast or a cozy late-night treat, it’s the ultimate taste of home.",
+        image: "images/pomme_de_terre.jpg"
+      },
+      {
+        id: "mais",
+        title: "Farrine Mais",
+        price: 9.95,
+        badge: "Comfort Staple",
+        description: "Premium, 100% natural Haitian corn flour. The comforting heart of traditional cooking. Perfect for preparing legendary classics like Akasan, rich Mayi Moulen, home-style polenta, and golden cornmeal.",
+        image: "images/mais.jpg"
+      },
+      {
+        id: "chocolat",
+        title: "Haitian Chocolat",
+        price: 8.95,
+        badge: "Authentic Recipe",
+        description: "A rich, smooth, and authentic Haitian chocolate bar made from premium raw cocoa beans and infused with traditional warm spices. The true taste of tradition and warmth. Made in Haiti with love.",
+        image: "images/chocolat.jpg"
+      }
+    ];
+
+    const DEFAULT_STORE_EMAIL = "liverightlane.market@gmail.com";
+    const DEFAULT_WEB3_KEY = "";
+
+    // 2. STATE CONFIGURATION (LOAD FROM localStorage OR USE DEFAULTS)
+    let products = JSON.parse(localStorage.getItem('lrl_products')) || DEFAULT_PRODUCTS;
+    let storeEmail = localStorage.getItem('lrl_store_email') || DEFAULT_STORE_EMAIL;
+    let web3Key = localStorage.getItem('lrl_web3_key') || DEFAULT_WEB3_KEY;
+    
+    // Shopping Cart state
+    let cart = {};
+
+    // 3. INITIALIZATION ON PAGE LOAD
+    document.addEventListener("DOMContentLoaded", () => {
+      renderProducts();
+      updateCartUI();
+      initializeAdminForm();
+      
+      // Update displayed store email in the footer
+      document.getElementById('footerDisplayEmail').textContent = storeEmail;
+      
+      // Show admin banner if we have custom local configurations active
+      if (localStorage.getItem('lrl_products') || localStorage.getItem('lrl_store_email') || localStorage.getItem('lrl_web3_key')) {
+        document.getElementById('adminModeBanner').style.display = 'block';
+      }
+    });
+
+    // 4. RENDER STORE PRODUCTS
+    function renderProducts() {
+      const grid = document.getElementById("productsGrid");
+      grid.innerHTML = "";
+      
+      products.forEach(product => {
+        const hasCustomQty = cart[product.id] || 0;
+        
+        const card = document.createElement("div");
+        card.className = "product-card";
+        card.id = `product-${product.id}`;
+        
+        let imageHtml = "";
+        if (product.image) {
+          imageHtml = `<img src="${product.image}" alt="${product.title}" onerror="handleImageError(this, '${product.title}')">`;
+        } else {
+          imageHtml = `
+            <div class="product-image-placeholder">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
+              </svg>
+              <span>${product.title}</span>
+              <small style="font-size:0.75rem; margin-top:4px; opacity:0.8;">Premium Import</small>
+            </div>
+          `;
+        }
+
+        card.innerHTML = `
+          <!-- Edit button indicator (shows in edit/admin mode) -->
+          <div class="btn-edit-indicator" onclick="toggleAdminPanel(true)" title="Edit this product">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+            </svg>
+          </div>
+          
+          <div class="product-image-container">
+            ${imageHtml}
+          </div>
+          
+          <div class="product-details">
+            <div class="product-details-top">
+              <span class="product-badge">${product.badge}</span>
+              <h3>${product.title}</h3>
+              <div class="price">$${product.price.toFixed(2)}</div>
+              <p class="description">${product.description}</p>
+            </div>
+            
+            <div class="product-actions">
+              <div class="qty-control">
+                <button class="qty-btn" onclick="adjustProductQty('${product.id}', -1)" aria-label="Decrease quantity">-</button>
+                <div class="qty-number" id="qtyDisplay-${product.id}">${hasCustomQty}</div>
+                <button class="qty-btn" onclick="adjustProductQty('${product.id}', 1)" aria-label="Increase quantity">+</button>
+              </div>
+              <button class="btn btn-primary btn-add-to-cart" onclick="addToCart('${product.id}')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        `;
+        
+        grid.appendChild(card);
+      });
+      
+      // Update UI edit indicator indicators depending on localStorage customization
+      const indicators = document.querySelectorAll('.btn-edit-indicator');
+      indicators.forEach(ind => {
+        ind.style.display = 'flex';
+      });
+    }
+
+    // Handle broken images elegantly
+    function handleImageError(imgElement, title) {
+      const container = imgElement.parentElement;
+      if (container) {
+        container.innerHTML = `
+          <div class="product-image-placeholder">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+            </svg>
+            <span>${title}</span>
+          </div>
+        `;
+      }
+    }
+
+    // 5. QUANTITY & CART MANIPULATION ENGINE
+    function adjustProductQty(productId, amount) {
+      const currentVal = cart[productId] || 0;
+      const newVal = Math.max(0, currentVal + amount);
+      
+      if (newVal === 0) {
+        delete cart[productId];
+      } else {
+        cart[productId] = newVal;
+      }
+      
+      // Update card display
+      const display = document.getElementById(`qtyDisplay-${productId}`);
+      if (display) display.textContent = newVal;
+      
+      updateCartUI();
+    }
+
+    function addToCart(productId) {
+      const currentVal = cart[productId] || 0;
+      cart[productId] = currentVal + 1;
+      
+      // Update display inside the product card
+      const display = document.getElementById(`qtyDisplay-${productId}`);
+      if (display) display.textContent = cart[productId];
+      
+      updateCartUI();
+      toggleCart(true); // Open the cart slide-out drawer
+    }
+
+    function updateCartUI() {
+      const cartCount = document.getElementById("cartCount");
+      const cartBody = document.getElementById("cartBody");
+      const cartFooter = document.getElementById("cartFooter");
+      
+      let totalQty = 0;
+      let subtotal = 0;
+      let cartItemsHtml = '<div class="cart-items-list">';
+      
+      products.forEach(product => {
+        const qty = cart[product.id] || 0;
+        if (qty > 0) {
+          totalQty += qty;
+          const itemCost = product.price * qty;
+          subtotal += itemCost;
+          
+          let imgTag = "";
+          if (product.image) {
+            imgTag = `<img src="${product.image}" alt="${product.title}">`;
+          } else {
+            imgTag = `
+              <div style="background:var(--bg-secondary); width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:var(--text-secondary); font-size:10px; font-weight:700;">
+                FLOUR
+              </div>
+            `;
+          }
+
+          cartItemsHtml += `
+            <div class="cart-item">
+              <div class="cart-item-img">
+                ${imgTag}
+              </div>
+              <div class="cart-item-details">
+                <h4>${product.title}</h4>
+                <div class="cart-item-price">$${product.price.toFixed(2)} x ${qty}</div>
+              </div>
+              <div class="qty-control" style="transform:scale(0.85); transform-origin:right;">
+                <button class="qty-btn" onclick="adjustProductQty('${product.id}', -1)">-</button>
+                <div class="qty-number">${qty}</div>
+                <button class="qty-btn" onclick="adjustProductQty('${product.id}', 1)">+</button>
+              </div>
+              <button class="cart-item-remove" onclick="adjustProductQty('${product.id}', -${qty})" aria-label="Remove item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                </svg>
+              </button>
+            </div>
+          `;
+        }
+      });
+      
+      cartItemsHtml += '</div>';
+      
+      // Update global cart badge count
+      cartCount.textContent = totalQty;
+      
+      if (totalQty === 0) {
+        cartBody.innerHTML = `
+          <div class="cart-empty-message">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+            </svg>
+            <p>Your cart is empty.</p>
+            <button class="btn btn-secondary" onclick="toggleCart(false)">Continue Shopping</button>
+          </div>
+        `;
+        cartFooter.style.display = "none";
+      } else {
+        // Core Shipping Calculation Logic:
+        // - 1 single item total (total quantity = 1): $9.99 S&H
+        // - 2 or more items total (total quantity >= 2): $11.99 S&H
+        let shipping = 0;
+        let shippingMsg = "";
+        
+        if (totalQty === 1) {
+          shipping = 9.99;
+          shippingMsg = "Add 1 more item to cap shipping at just $11.99 total!";
+        } else if (totalQty >= 2) {
+          shipping = 11.99;
+          shippingMsg = "🎉 Flat Capped Shipping unlocked!";
+        }
+        
+        const total = subtotal + shipping;
+        
+        // Append checkout form inside the body
+        cartBody.innerHTML = cartItemsHtml + `
+          <div class="checkout-form-container">
+            <h3>Shipping Details</h3>
+            <form id="orderForm" onsubmit="event.preventDefault();">
+              <div class="form-group">
+                <label for="checkoutName">Full Name</label>
+                <input type="text" id="checkoutName" class="form-control" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="checkoutEmail">Email Address</label>
+                <input type="email" id="checkoutEmail" class="form-control" placeholder="john@example.com" required>
+              </div>
+              <div class="form-group">
+                <label for="checkoutPhone">Phone Number</label>
+                <input type="tel" id="checkoutPhone" class="form-control" placeholder="(555) 000-0000" required>
+              </div>
+              <div class="form-group">
+                <label for="checkoutAddress">Delivery Address</label>
+                <input type="text" id="checkoutAddress" class="form-control" placeholder="123 Main St, Apt 4" required>
+              </div>
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="checkoutState">State</label>
+                  <input type="text" id="checkoutState" class="form-control" placeholder="NY" required>
+                </div>
+                <div class="form-group">
+                  <label for="checkoutZip">Zip Code</label>
+                  <input type="text" id="checkoutZip" class="form-control" placeholder="10001" required>
+                </div>
+              </div>
+            </form>
+          </div>
+        `;
+        
+        // Render Footer calculation summary
+        document.getElementById("cartSubtotal").textContent = `$${subtotal.toFixed(2)}`;
+        document.getElementById("cartShipping").textContent = `$${shipping.toFixed(2)}`;
+        
+        const msgEl = document.getElementById("shippingMessage");
+        msgEl.textContent = shippingMsg;
+        if (totalQty >= 2) {
+          msgEl.style.color = "var(--accent-green)";
+          msgEl.style.fontWeight = "600";
+        } else {
+          msgEl.style.color = "var(--accent-gold)";
+          msgEl.style.fontWeight = "normal";
+        }
+        
+        document.getElementById("cartTotal").textContent = `$${total.toFixed(2)}`;
+        cartFooter.style.display = "block";
+      }
+    }
+
+    // 6. TOGGLE SIDE-BAR CARTS
+    function toggleCart(isOpen) {
+      const overlay = document.getElementById("cartOverlay");
+      const drawer = document.getElementById("cartDrawer");
+      
+      if (isOpen) {
+        overlay.classList.add("active");
+        drawer.classList.add("active");
+      } else {
+        overlay.classList.remove("active");
+        drawer.classList.remove("active");
+      }
+    }
+
+    // 7. ORDER SUBMISSION ENGINE & EMAIL API SETUP
+    function submitOrder() {
+      // Form Validation Check
+      const name = document.getElementById("checkoutName")?.value.trim();
+      const email = document.getElementById("checkoutEmail")?.value.trim();
+      const phone = document.getElementById("checkoutPhone")?.value.trim();
+      const address = document.getElementById("checkoutAddress")?.value.trim();
+      const state = document.getElementById("checkoutState")?.value.trim();
+      const zip = document.getElementById("checkoutZip")?.value.trim();
+      
+      if (!name || !email || !phone || !address || !state || !zip) {
+        alert("Please complete all shipping address fields before submitting your order.");
+        document.getElementById("checkoutName")?.focus();
+        return;
+      }
+      
+      // Calculate final summary
+      let orderItems = [];
+      let subtotal = 0;
+      let totalQty = 0;
+      
+      products.forEach(product => {
+        const qty = cart[product.id] || 0;
+        if (qty > 0) {
+          totalQty += qty;
+          const cost = product.price * qty;
+          subtotal += cost;
+          orderItems.push(`${product.title} (x${qty}) - $${cost.toFixed(2)}`);
+        }
+      });
+      
+      const shipping = totalQty === 1 ? 9.99 : 11.99;
+      const grandTotal = subtotal + shipping;
+      
+      const invoiceString = orderItems.join("\n");
+      const shippingAddress = `${address}, ${state} - ${zip}`;
+      
+      // HTML email template structure
+      const emailSubject = `🛒 NEW STORE ORDER - ${name}`;
+      const emailBodyText = `
+LIVE RIGHT LANE MARKET - NEW ORDER INVOICE
+--------------------------------------------------
+Customer Name: ${name}
+Email Address: ${email}
+Phone Number:  ${phone}
+Delivery Address: ${address}, ${state} ${zip}
+
+--------------------------------------------------
+ITEMS IN CART:
+${invoiceString}
+
+--------------------------------------------------
+Subtotal: $${subtotal.toFixed(2)}
+Shipping & Handling: $${shipping.toFixed(2)}
+--------------------------------------------------
+TOTAL ORDER VALUE: $${grandTotal.toFixed(2)}
+
+Please contact the buyer directly at ${email} or ${phone} to arrange payment and processing.
+      `.trim();
+
+      // Trigger Checkout Button loading state
+      const btn = document.querySelector(".btn-checkout");
+      const originalText = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = `
+        <svg style="animation: spin 1s linear infinite; margin-right: 8px;" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <circle cx="12" cy="12" r="10" stroke="var(--accent-gold-light)" stroke-width="4"></circle>
+          <path d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" fill="currentColor"></path>
+        </svg>
+        Processing Order...
+      `;
+
+      // STYLE KEYFRAME FOR LOADING SPIN
+      if (!document.getElementById("spin-animation-style")) {
+        const style = document.createElement("style");
+        style.id = "spin-animation-style";
+        style.innerHTML = "@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }";
+        document.head.appendChild(style);
+      }
+
+      // Check if Web3Forms Access Key is configured
+      if (web3Key && web3Key.trim() !== "") {
+        // Send email via dynamic Web3Forms REST endpoint (Direct, instant email)
+        const payload = {
+          access_key: web3Key,
+          subject: emailSubject,
+          from_name: "Live Right Lane Storefront",
+          name: name,
+          email: email,
+          phone: phone,
+          address: shippingAddress,
+          message: `
+--- ORDER INVOICE ---
+${invoiceString}
+
+--- COMPUTATIONS ---
+Subtotal: $${subtotal.toFixed(2)}
+Shipping & Handling: $${shipping.toFixed(2)}
+Grand Total: $${grandTotal.toFixed(2)}
+          `
+        };
+        
+        fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify(payload)
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            handleCheckoutSuccess(true);
+          } else {
+            console.error("Web3Forms error response:", data);
+            triggerMailtoFallback(emailBodyText, btn, originalText);
+          }
+        })
+        .catch(err => {
+          console.error("Web3Forms POST error:", err);
+          triggerMailtoFallback(emailBodyText, btn, originalText);
+        });
+        
+      } else {
+        // Fallback directly to mailto client (opens Outlook/Gmail instantly)
+        triggerMailtoFallback(emailBodyText, btn, originalText);
+      }
+    }
+
+    function triggerMailtoFallback(emailBodyText, btn, originalText) {
+      // Re-enable button
+      btn.disabled = false;
+      btn.innerHTML = originalText;
+      
+      const mailtoUrl = `mailto:${storeEmail}?subject=${encodeURIComponent("🛒 New Storefront Order Submission")}&body=${encodeURIComponent(emailBodyText)}`;
+      
+      // Open default mail client draft
+      window.location.href = mailtoUrl;
+      
+      // Inform client with optimized instructions
+      document.getElementById("successMessage").innerHTML = `
+        We have compiled your order invoice! 
+        <br><br>
+        Your local email application (Outlook/Gmail) should have opened with a pre-filled order draft. 
+        Please **click send** on that draft to submit your order details to us at <strong>${storeEmail}</strong> instantly.
+        <br><br>
+        If your email program didn't open, copy your invoice from below and email it to us:
+        <pre style="text-align:left; background:var(--bg-secondary); padding:12px; font-size:0.75rem; border-radius:4px; margin-top:12px; overflow-x:auto; font-family:monospace;">${emailBodyText}</pre>
+      `;
+      
+      handleCheckoutSuccess(false);
+    }
+
+    function handleCheckoutSuccess(isFullyAutomated) {
+      // Clear Cart
+      cart = {};
+      products.forEach(p => {
+        const display = document.getElementById(`qtyDisplay-${p.id}`);
+        if (display) display.textContent = "0";
+      });
+      updateCartUI();
+      
+      // Close Cart Drawer
+      toggleCart(false);
+      
+      // Open Success dialog overlay
+      document.getElementById("successOverlay").style.display = "flex";
+      
+      if (isFullyAutomated) {
+        document.getElementById("successMessage").innerHTML = `
+          Your order has been compiled and emailed to the storefront owner at <strong>${storeEmail}</strong> instantly.
+          <br><br>
+          We will contact you shortly via email or phone to confirm processing, payment, and shipping!
+        `;
+      }
+    }
+
+    function closeSuccessModal() {
+      document.getElementById("successOverlay").style.display = "none";
+    }
+
+    // 8. LIVE STORE ADMIN PANEL & localStorage PERSISTENCE
+    function toggleAdminPanel(isOpen) {
+      const panel = document.getElementById("adminOverlay");
+      panel.style.display = isOpen ? "flex" : "none";
+      if (isOpen) {
+        renderAdminProductRows();
+      }
+    }
+
+    function initializeAdminForm() {
+      document.getElementById("adminStoreEmail").value = storeEmail;
+      document.getElementById("adminWeb3Key").value = web3Key;
+    }
+
+    function renderAdminProductRows() {
+      const container = document.getElementById("adminProductRows");
+      container.innerHTML = "";
+      
+      products.forEach((product, idx) => {
+        const row = document.createElement("div");
+        row.className = "admin-product-row";
+        
+        let imgTag = "";
+        if (product.image) {
+          imgTag = `<img src="${product.image}" class="admin-img-preview" id="admin-preview-${product.id}">`;
+        } else {
+          imgTag = `
+            <div id="admin-preview-${product.id}" class="admin-img-preview" style="display:flex; align-items:center; justify-content:center; background:var(--bg-secondary); color:var(--text-secondary); font-size:8px; font-weight:700; text-align:center; line-height:1.1;">
+              NO IMAGE
+            </div>
+          `;
+        }
+
+        row.innerHTML = `
+          ${imgTag}
+          <div style="font-weight:600;">${product.title}</div>
+          <div>
+            <div class="form-group" style="margin-bottom:8px;">
+              <label style="font-size:0.7rem; margin-bottom:2px;">Custom Price ($)</label>
+              <input type="number" step="0.01" class="form-control" style="padding:6px 10px; font-size:0.8rem;" id="admin-price-${product.id}" value="${product.price.toFixed(2)}">
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <label style="font-size:0.7rem; margin-bottom:2px;">Tasteful Description</label>
+              <textarea class="form-control" style="padding:6px 10px; font-size:0.75rem; min-height:50px; resize:vertical; font-family:var(--font-sans);" id="admin-desc-${product.id}">${product.description}</textarea>
+            </div>
+          </div>
+          <div>
+            <div class="file-input-wrapper">
+              <button class="btn-file-upload">Upload Photo</button>
+              <input type="file" accept="image/*" onchange="handleAdminPhotoUpload(event, '${product.id}')" aria-label="Upload photo for ${product.title}">
+            </div>
+          </div>
+        `;
+        
+        container.appendChild(row);
+      });
+    }
+
+    // Read custom files as Base64 strings for instant client-side persistence
+    function handleAdminPhotoUpload(event, productId) {
+      const file = event.target.files[0];
+      if (!file) return;
+      
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const base64String = e.target.result;
+        
+        // Update product state image path
+        const productIndex = products.findIndex(p => p.id === productId);
+        if (productIndex !== -1) {
+          products[productIndex].image = base64String;
+        }
+        
+        // Update Admin Modal Image Preview
+        const preview = document.getElementById(`admin-preview-${productId}`);
+        if (preview) {
+          if (preview.tagName === 'IMG') {
+            preview.src = base64String;
+          } else {
+            // Replace text block with actual img
+            const newImg = document.createElement('img');
+            newImg.id = `admin-preview-${productId}`;
+            newImg.className = 'admin-img-preview';
+            newImg.src = base64String;
+            preview.parentNode.replaceChild(newImg, preview);
+          }
+        }
+      };
+      
+      reader.readAsDataURL(file);
+    }
+
+    function saveAdminSettings() {
+      // Save global configuration parameters
+      const customEmail = document.getElementById("adminStoreEmail").value.trim();
+      const customWeb3Key = document.getElementById("adminWeb3Key").value.trim();
+      
+      if (customEmail) {
+        storeEmail = customEmail;
+        localStorage.setItem('lrl_store_email', storeEmail);
+        document.getElementById('footerDisplayEmail').textContent = storeEmail;
+      }
+      
+      web3Key = customWeb3Key;
+      localStorage.setItem('lrl_web3_key', web3Key);
+      
+      // Save specific products modifications
+      products.forEach(p => {
+        const priceInput = document.getElementById(`admin-price-${p.id}`);
+        const descInput = document.getElementById(`admin-desc-${p.id}`);
+        
+        if (priceInput) {
+          const parsedPrice = parseFloat(priceInput.value);
+          if (!isNaN(parsedPrice) && parsedPrice >= 0) {
+            p.price = parsedPrice;
+          }
+        }
+        
+        if (descInput) {
+          p.description = descInput.value.trim();
+        }
+      });
+      
+      localStorage.setItem('lrl_products', JSON.stringify(products));
+      
+      // Re-render views
+      renderProducts();
+      updateCartUI();
+      
+      // Close admin configuration drawer
+      toggleAdminPanel(false);
+      
+      // Trigger and reveal active custom modifications notification banner
+      document.getElementById('adminModeBanner').style.display = 'block';
+      alert("Storefront changes saved successfully!");
+    }
+
+    function resetAdminDefaults() {
+      if (confirm("Are you sure you want to clear all custom uploaded photos, pricing modifications, and restore default settings?")) {
+        localStorage.removeItem('lrl_products');
+        localStorage.removeItem('lrl_store_email');
+        localStorage.removeItem('lrl_web3_key');
+        
+        // Reset local memory state parameters
+        products = JSON.parse(JSON.stringify(DEFAULT_PRODUCTS)); // Deep clone defaults
+        storeEmail = DEFAULT_STORE_EMAIL;
+        web3Key = DEFAULT_WEB3_KEY;
+        
+        // Re-initialize general layout controls
+        initializeAdminForm();
+        renderProducts();
+        updateCartUI();
+        
+        document.getElementById('footerDisplayEmail').textContent = storeEmail;
+        document.getElementById('adminModeBanner').style.display = 'none';
+        
+        toggleAdminPanel(false);
+        alert("Defaults restored successfully!");
+      }
+    }
+  </script>
+</body>
+</html>
